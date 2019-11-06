@@ -28,27 +28,28 @@
             }
         }
 
-        const Navigation =() => {
+        const Navigation =() => (
             <nav className="Navigation">
                 <img src="http://placehold.it/100*100" alt="avator" className="avator" /> 
                 
             </nav>
-        };
+        );
 
         // intro 부분 (className 은 후에 css에서 사용하게 위해 미리 만들자)
-        const Intro = () => {
+        const Intro = () => (
             <div id="INTRO" className="section">
                 <h1>Inguk's portfolios</h1>
                 <div>
                     <a href = "mailto:youig6495@naver.com">youig6495@naver.com</a>
                 </div>
             </div>
-        };
+        
+        );
 
-        const Project = ({name, period, summary, epilogue, resulturl}) => {
+        const Project = ({name, period, summary, epilogue, resulturl}) => (
             <div>
                 <h2> {name} </h2>
-                <p>{time}</p>
+                <p>{period}</p>
 
                <div>
                 <h1> 프로젝트 개요 </h1>
@@ -61,7 +62,8 @@
                 <div> {resulturl.map(url => <p>{url}</p>)} </div>
                 </div> 
             </div>
-        }
+        )
+        
 
         //project 정보는 배열로 관리
         const projects = [
@@ -82,19 +84,21 @@
         ];
 
         const App = () => {
+            return(
+                
             <div>
-                <Navigation/>
+                <Navigation />
                 <div>
                     <div>
-                        <Intro/>
+                        <Intro />
                         <Project {...projects[0]}/> 
                         <Project {...projects[1]}/> 
                     </div>
                 </div>
             </div>
+            )
         };
-        
-        ReactDOM.render(<App/>, document.querySelector("#root"));
+        ReactDOM.render(<App />, document.querySelector("#root"));
     </script>
 </body>
 <!-- 비구조화 할당  {...projects[0]} -->
