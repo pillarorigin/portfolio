@@ -33,23 +33,30 @@
             <nav className="Navigation">
                 <img src="https://placehold.it/100*100" alt="avator" className="avator" /> 
                 <NavLink itemName="INTRO" />
-                <NavLink itemName="프로젝트1" />
-                <NavLink itemName="프로젝트2" />
+                <NavLink itemName="styel" />
+                <NavLink itemName="SH_management" />
             </nav>
         );
 
         // intro 부분 (className 은 후에 css에서 사용하게 위해 미리 만들자)
         const Intro = () => (
-            <div id="INTRO" className="section">
+            <div id="INTRO" className="section">    
                 <h1>Inguk's portfolios</h1>
                 <div>
                     <a href = "mailto:youig6495@naver.com">youig6495@naver.com</a>
+                    <p>학습하는 능력을 학습하는 개발자 지망생 유인국입니다</p>
+                </div>
+                <div>
+                    <h2>경력</h2>
+                    <p> someting.. 수정 중  </p>
+                    <h2>자기소개</h2>
+                    <p> someting.. 수정 중  </p>
                 </div>
             </div>
         
         );
 
-        const Project = ({name, period, summary, epilogue, resulturl}) => (
+        const Project = ({name, period, summary, epilogue, resultURL}) => (
             <div id={name} className="section">
                 <h2> {name} </h2>
                 <p>{period}</p>
@@ -62,10 +69,10 @@
                 <p> {epilogue} </p>
 
                 <h3> 결과 </h3>
-                    <div> {resulturl.map(url => (
-                        <img src={url} alt="project resulturl" />
-                        <p>{url}</p>
-                        ))} 
+                    <div> 
+                        {resultURL.map(url => (
+                            <img src={url} alt="project result" />
+                        ))}
                     </div>
                 </div> 
             </div>
@@ -79,7 +86,7 @@
           period: "2019.08~2019.09",
           summary: "스타일리쉬한 플랫폼 서비스",
           epilogue: "forntend",
-          resulturl: [
+          resultURL: [
               "https://github.com/styel-io",
               "https://placehold.it/200x200"
               ]
@@ -89,7 +96,7 @@
           period: "2019.10.15~2019.11.05",
           summary: "후원이력관리 시스템",
           epilogue: "backend, contract",
-          resulturl: [
+          resultURL: [
               "https://github.com/lemontech119/SH_management",
               "https://github.com/lemontech119/SH_management"
               ]
