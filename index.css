@@ -1,3 +1,13 @@
+/* 스크롤 smooth 하게 */
+html {
+    scroll-behavior: smooth;
+}
+
+.avator {
+    border-radius: 50%;
+    width: 50%;
+}
+
 .Navigation{
     background-color: moccasin;
     position: fixed;
@@ -20,6 +30,12 @@
     color: palegreen;
 }
 
+@media (max-width: 750px){
+    .nav_item {
+        font-size: 19px;
+    }
+}
+
 .main{
     display: grid; 
     /* 내용을 오른쪽으로 움직이게 */
@@ -32,7 +48,7 @@
     padding-right: 20px;
 }
 
-.sectionProject{
+.section{
     min-height: 100vh;
     padding-top: 30px;
 }

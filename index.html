@@ -50,7 +50,7 @@
         );
 
         const Project = ({name, period, summary, epilogue, resulturl}) => (
-            <div id={name} className="sectionProject">
+            <div id={name} className="section">
                 <h2> {name} </h2>
                 <p>{period}</p>
 
@@ -62,7 +62,11 @@
                 <p> {epilogue} </p>
 
                 <h3> 결과 </h3>
-                <div> {resulturl.map(url => (<p>{url}</p>))} </div>
+                    <div> {resulturl.map(url => (
+                        <img src={url} alt="project resulturl" />
+                        <p>{url}</p>
+                        ))} 
+                    </div>
                 </div> 
             </div>
         )
